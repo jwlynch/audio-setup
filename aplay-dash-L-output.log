@@ -1,0 +1,110 @@
+null
+    Discard all samples (playback) or generate zero samples (capture)
+jack
+    JACK Audio Connection Kit
+pulse
+    PulseAudio Sound Server
+default
+    Playback/recording through the PulseAudio sound server
+hdmi:CARD=HDMI,DEV=0
+    HDA Intel HDMI, HDMI 0
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=1
+    HDA Intel HDMI, HDMI 1
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=2
+    HDA Intel HDMI, HDMI 2
+    HDMI Audio Output
+dmix:CARD=HDMI,DEV=3
+    HDA Intel HDMI, HDMI 0
+    Direct sample mixing device
+dmix:CARD=HDMI,DEV=7
+    HDA Intel HDMI, HDMI 1
+    Direct sample mixing device
+dmix:CARD=HDMI,DEV=8
+    HDA Intel HDMI, HDMI 2
+    Direct sample mixing device
+dsnoop:CARD=HDMI,DEV=3
+    HDA Intel HDMI, HDMI 0
+    Direct sample snooping device
+dsnoop:CARD=HDMI,DEV=7
+    HDA Intel HDMI, HDMI 1
+    Direct sample snooping device
+dsnoop:CARD=HDMI,DEV=8
+    HDA Intel HDMI, HDMI 2
+    Direct sample snooping device
+hw:CARD=HDMI,DEV=3
+    HDA Intel HDMI, HDMI 0
+    Direct hardware device without any conversions
+hw:CARD=HDMI,DEV=7
+    HDA Intel HDMI, HDMI 1
+    Direct hardware device without any conversions
+hw:CARD=HDMI,DEV=8
+    HDA Intel HDMI, HDMI 2
+    Direct hardware device without any conversions
+plughw:CARD=HDMI,DEV=3
+    HDA Intel HDMI, HDMI 0
+    Hardware device with all software conversions
+plughw:CARD=HDMI,DEV=7
+    HDA Intel HDMI, HDMI 1
+    Hardware device with all software conversions
+plughw:CARD=HDMI,DEV=8
+    HDA Intel HDMI, HDMI 2
+    Hardware device with all software conversions
+usbstream:CARD=HDMI
+    HDA Intel HDMI
+    USB Stream Output
+sysdefault:CARD=PCH
+    HDA Intel PCH, ALC892 Analog
+    Default Audio Device
+front:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    Front speakers
+surround21:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    2.1 Surround output to Front and Subwoofer speakers
+surround40:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    4.0 Surround output to Front and Rear speakers
+surround41:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    4.1 Surround output to Front, Rear and Subwoofer speakers
+surround50:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    5.0 Surround output to Front, Center and Rear speakers
+surround51:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    5.1 Surround output to Front, Center, Rear and Subwoofer speakers
+surround71:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    7.1 Surround output to Front, Center, Side, Rear and Woofer speakers
+iec958:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Digital
+    IEC958 (S/PDIF) Digital Audio Output
+dmix:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    Direct sample mixing device
+dmix:CARD=PCH,DEV=1
+    HDA Intel PCH, ALC892 Digital
+    Direct sample mixing device
+dsnoop:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    Direct sample snooping device
+dsnoop:CARD=PCH,DEV=1
+    HDA Intel PCH, ALC892 Digital
+    Direct sample snooping device
+hw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    Direct hardware device without any conversions
+hw:CARD=PCH,DEV=1
+    HDA Intel PCH, ALC892 Digital
+    Direct hardware device without any conversions
+plughw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC892 Analog
+    Hardware device with all software conversions
+plughw:CARD=PCH,DEV=1
+    HDA Intel PCH, ALC892 Digital
+    Hardware device with all software conversions
+usbstream:CARD=PCH
+    HDA Intel PCH
+    USB Stream Output

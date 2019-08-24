@@ -1,0 +1,51 @@
+19:35:24.691 Logging started --- Sun Aug 11 19:35:24 2019 ---
+19:35:24.753 Statistics reset.
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+19:35:27.781 Startup script...
+19:35:27.781 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+19:35:28.183 Startup script terminated with exit status=32512.
+19:35:28.183 JACK is starting...
+19:35:28.183 /usr/bin/jackd -r -dalsa -dhw:0 -r48000 -p4096 -n2 -P -o2
+19:35:28.185 JACK was started with PID=31925.
+no message buffer overruns
+no message buffer overruns
+no message buffer overruns
+jackdmp 1.9.12
+Copyright 2001-2005 Paul Davis and others.
+Copyright 2004-2016 Grame.
+Copyright 2016-2017 Filipe Coelho.
+jackdmp comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the file COPYING for details
+JACK server starting in non-realtime mode
+self-connect-mode is "Don't restrict self connect requests"
+audio_reservation_init
+Acquire audio card Audio0
+creating alsa driver ... hw:0|-|4096|2|48000|0|2|nomon|swmeter|-|32bit
+ALSA: Cannot open PCM device alsa_pcm for playback. Falling back to capture-only mode
+Released audio card Audio0
+audio_reservation_finish
+Cannot initialize driver
+JackServer::Open failed with -1
+Failed to open server
+19:35:28.263 JACK was stopped
+19:35:28.263 Post-shutdown script...
+19:35:28.263 killall jackd
+jackd: no process found
+19:35:28.667 Post-shutdown script terminated with exit status=256.
+19:35:30.380 Could not connect to JACK server as client. - Overall operation failed. - Unable to connect to server. Please check the messages window for more info.
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock

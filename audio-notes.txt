@@ -1,0 +1,139 @@
+<SerajewelKS> jim: i literally run "pulseaudio --kill" then hit "start"
+                   in qjackctl, then run "pulseaudio --start", run my
+		   script to create the bridges, then start ardour
+
+<alkisg> jim, does this work? systemctl --user stop pulseaudio.socket;
+              start jack; systemctl --user stop pulseaudio.service
+<alkisg> sorry, both of them, THEN start jack, then restart services
+<jim> alkisg, should I restart the socket and the service in the reverse order
+              I stop them in?
+<alkisg> Sure
+
+to make sure memory can be allocated by audio group members, set ulimit -l to
+unlimited, and also make sure to log out and log back in to make sure user's
+membership in audio group is active
+
+<jim> hi... how can I tell which alsa sink my pulseaudio is sending to,
+        in order to get to the speakers?
+<jim> I want to try to get jackd to send to that same sink
+<wabbits> jim `pactl list sinks` search for the alsa.mixer_name key/val
+<wabbits> that will give you the mapping between the alsa playback device and the
+            corresponding pulseaudio sink
+<wabbits> another way would be to use your ears :|
+<jim> alsa.mixer_name = "Intel Haswell HDMI"
+<wabbits> use `aplay -l` to find out what cards you have and then
+            `alsamixer -c$card` to see the matching name
+
+<SerajewelKS> do you still have the line i use to create more
+                pulseaudio -> jack sinks?
+<SerajewelKS> in case you want to be able to separate audio from your
+                programs; you can direct the audio with pavucontrol
+<jim> no, I'd appreciate a repost... and, 
+<jim> what's the difference between how it is now (I guess one sink?) and multiple?
+<SerajewelKS> pactl load-module module-jack-sink client_name=pulse_sink_"$1"
+                connect=no channels=2
+<SerajewelKS> "$1" obviously is the script argument, if you put it in a script
+<jim> so each sink is stereo?
+<SerajewelKS> each sink adds two things: the sink in pulseaudio (of course)
+                and a corresponding source in jack
+<SerajewelKS> yes
+<SerajewelKS> if you direct the output of two programs to one sink, pulseaudio
+                mixes them together and sends the result to jack, so in
+		the jack world the audio is already mixed together
+<jim> it loads another copy of the module?
+<jim> each time that is
+<SerajewelKS> i'm not sure if that's what happens under the hood, but either
+                way you get another sink
+<SerajewelKS> then on the jack side, each pulseaudio sink can be read separately
+<SerajewelKS> i use this so i can apply dynamic range compression to twitch,
+                but not to my other audio
+<SerajewelKS> and eq my music, but not my other audio
+<SerajewelKS> so i have a "twitch" sink and a "music" sink (and a few others)
+<jim> so that module load also adds a corresponding source to jack?
+<SerajewelKS> correct
+<SerajewelKS> i refer to them as "bridges"
+<SerajewelKS> a sink in one system that passes audio to a source in another system
+<SerajewelKS> each bridge is a separate audio path
+<SerajewelKS> i also use this type of setup on windows (though with
+                something else instead of pulse... i still use jack and ardour)
+<SerajewelKS> sometimes i stream on twitch, and i want a different mix in
+                my headphones than i send to the stream
+<SerajewelKS> i can do that because i separate the audio from various programs.
+                not every program, but most.
+<SerajewelKS> my music player goes in one channel, my mic in one, my game
+                in another, the "default" one (for system sounds) in another
+		which i can mute for the stream mix
+<SerajewelKS> can gate+eq+compress my mic
+
+<jim> right now I gotta get a simple small (maybe POS) mic I can use to get
+        vocal audio (legable hopefully :) to a track, on ardour, audacity
+	or something
+<SerajewelKS> one neat thing you can use bridges for is to record audio from a
+                specific program, without having to worry about other programs
+		making noise while you record
+<jim> and I figure a simple analog headset with a mic could fit that bill
+<SerajewelKS> of course, pulse can already do that by recording from a monitor device
+<SerajewelKS> but when i have pulse+jack set up it's just easier to do that using jack
+<SerajewelKS> yep, i have one such headset for when i game/stream
+<SerajewelKS> the ardour setup is nice because i can apply all that cleaning
+                up to my mic even for just voice chat with others, not even
+		streaming to twitch
+<jim> how has your headset lasted?
+<SerajewelKS> so my teammates don't have to put up with background noise and
+                large dynamic range
+<SerajewelKS> it's alright.  the mic is kinda crappy but it's not like i didn't
+                expect that.
+<SerajewelKS> of course it's hard to tell how much of the noise is just line
+                noise in the sound card
+<jim> how long have you had it?
+<SerajewelKS> not sure, let me check my music history
+<SerajewelKS> it has a wind screen, which is nice
+<jim> that would be nice for the puh lce audio and puh inging a host that might
+        need puh inging
+<jim> when you find when you got it, could you let me know which one it is?
+<SerajewelKS> "puh"?
+<jim> the wind screen would filter that out
+<SerajewelKS> ah, i just didn't understand what you meant :)
+<SerajewelKS> https://www.amazon.com/gp/product/B00KX3TLF4/
+<SerajewelKS> i got it in december 2015
+<SerajewelKS> still going strong, though my usage hasn't been what i would call heavy
+<SerajewelKS> i used to use it at least once a week to game with friends
+<SerajewelKS> now i mostly use it 1-2 times a month for work conference calls :)
+<SerajewelKS> i used it a lot for gaming because my office was right next to the
+                living room.  now my office is in the basement so i don't feel
+		the need to keep it that quiet.
+<jim> call that beginning of 2016,,, so a bit over 3.5 years
+<SerajewelKS> yeah
+<jim> and it never developed problems?
+<SerajewelKS> hasn't yet
+<SerajewelKS> i got my sony mdr7506 headphones that i use at work in july 2015
+<SerajewelKS> i had to replace the pads today because they were starting to tear
+<SerajewelKS> but they get a lot more use, so it's probably not a fair comparison
+<jim> lotsa gaming with it?
+<SerajewelKS> the sonys?  nah, i have them at work.  i use them to listen to
+                music and try to block out background noise.  :)
+<SerajewelKS> my company does the tech for some live streaming events (video
+                mixing and streaming equipment; usually there's a separate
+		company doing the audio)
+<SerajewelKS> and i usually bring the sonys to those events as well so i can
+                monitor the internet feed
+<SerajewelKS> they aren't a headset though (no mic)
+<SerajewelKS> but the audio quality is incredible
+<SerajewelKS> i figured if i'm listening to music at work every day i can
+                justify an $80 set of headphones
+<jim> but the sony doesn't have a mic?
+<SerajewelKS> correct
+<SerajewelKS> they're marketed as studio monitors
+<jim> ok
+<SerajewelKS> e.g. to be used in an audio production studio
+<SerajewelKS> but my dad has a set for personal use and i used them a lot growing
+                up.  really liked them, so i figured why not
+<SerajewelKS> i think he's had the same pair for like 15+ years
+<SerajewelKS> anyway
+<jim> your dad has the sonys too?
+<SerajewelKS> the hyperx headset is definity decent and it seems to have lasted
+                awhile.  the mic is also a detachable piece so you can pull it
+		off if you want to use them as headphones for a bit without
+		having a mic in your face.
+<SerajewelKS> yeah he also has the mdr7506 set
+<SerajewelKS> they're used by a lot of audio professionals

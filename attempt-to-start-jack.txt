@@ -1,0 +1,97 @@
+21:01:44.080 Statistics reset.
+21:01:44.113 ALSA connection change.
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+21:01:44.353 ALSA connection graph change.
+21:01:51.398 Startup script...
+21:01:51.398 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+21:01:51.799 Startup script terminated with exit status=32512.
+21:01:51.799 JACK is starting...
+21:01:51.799 /usr/bin/jackd -v -dalsa -dhw:0 -r48000 -p1024 -n2 -P -o2
+21:01:51.801 JACK was started with PID=5537.
+Cannot create RT messagebuffer thread: Operation not permitted (1)
+Retrying messagebuffer thread without RT scheduling
+Messagebuffer not realtime; consider enabling RT scheduling for user
+no message buffer overruns
+Cannot create RT messagebuffer thread: Operation not permitted (1)
+Retrying messagebuffer thread without RT scheduling
+Messagebuffer not realtime; consider enabling RT scheduling for user
+no message buffer overruns
+Cannot create RT messagebuffer thread: Operation not permitted (1)
+Retrying messagebuffer thread without RT scheduling
+Messagebuffer not realtime; consider enabling RT scheduling for user
+no message buffer overruns
+jackdmp 1.9.12
+Copyright 2001-2005 Paul Davis and others.
+Copyright 2004-2016 Grame.
+Copyright 2016-2017 Filipe Coelho.
+jackdmp comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the file COPYING for details
+JACK server starting in realtime mode with priority 10
+self-connect-mode is "Don't restrict self connect requests"
+Cannot lock down 82280346 byte memory area (Cannot allocate memory)
+Jack: JackPosixThread::StartImp : create non RT thread
+Jack: JackPosixThread::ThreadHandler : start
+Jack: playback device hw:0
+Jack: capture device hw:0
+Jack: apparent rate = 48000
+Jack: frames per period = 1024
+Jack: JackDriver::Open capture_driver_name = hw:0
+Jack: JackDriver::Open playback_driver_name = hw:0
+Jack: Check protocol client = 8 server = 8
+Jack: JackEngine::ClientInternalOpen: name = system
+Jack: JackEngine::AllocateRefNum ref = 0
+Jack: JackLinuxFutex::Allocate name = jack_sem.1000_default_system val = 0
+Jack: JackEngine::NotifyAddClient: name = system
+Jack: JackGraphManager::SetBufferSize size = 1024
+Jack: JackConnectionManager::DirectConnect first: ref1 = 0 ref2 = 0
+Jack: JackGraphManager::ConnectRefNum cur_index = 0 ref1 = 0 ref2 = 0
+Jack: JackDriver::SetupDriverSync driver sem in flush mode
+audio_reservation_init
+Acquire audio card Audio0
+creating alsa driver ... hw:0|-|1024|2|48000|0|2|nomon|swmeter|-|32bit
+ALSA: Cannot open PCM device alsa_pcm for playback. Falling back to capture-only mode
+Jack: JackDriver::Close
+Jack: JackConnectionManager::DirectDisconnect last: ref1 = 0 ref2 = 0
+Jack: JackGraphManager::DisconnectRefNum cur_index = 0 ref1 = 0 ref2 = 0
+Jack: JackEngine::ClientInternalClose ref = 0
+Jack: JackEngine::ClientCloseAux ref = 0
+Jack: JackGraphManager::RemoveAllPorts ref = 0
+Released audio card Audio0
+audio_reservation_finish
+Jack: ~JackDriver
+Cannot initialize driver
+Jack: no message buffer overruns
+Jack: JackPosixThread::Stop
+Jack: JackPosixThread::ThreadHandler : exit
+JackServer::Open failed with -1
+Jack: Succeeded in unlocking 82280346 byte memory area
+Jack: JackShmMem::delete size = 0 index = 0
+Jack: ~JackDriver
+Jack: Succeeded in unlocking 1187 byte memory area
+Jack: JackShmMem::delete size = 0 index = 1
+Jack: Cleaning up shared memory
+Jack: Cleaning up files
+Jack: Unregistering server `default'
+Failed to open server
+21:01:51.855 JACK was stopped
+21:01:51.855 Post-shutdown script...
+21:01:51.855 killall jackd
+jackd: no process found
+21:01:52.259 Post-shutdown script terminated with exit status=256.
+21:01:53.986 Could not connect to JACK server as client. - Overall operation failed. - Unable to connect to server. Please check the messages window for more info.
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock

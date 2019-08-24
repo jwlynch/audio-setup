@@ -1,0 +1,4 @@
+#!/bin/bash
+
+  529  systemctl --user stop pulseaudio.socket
+  530  systemctl --user stop pulseaudio.service
