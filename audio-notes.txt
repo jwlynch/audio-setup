@@ -137,3 +137,22 @@ membership in audio group is active
 		having a mic in your face.
 <SerajewelKS> yeah he also has the mdr7506 set
 <SerajewelKS> they're used by a lot of audio professionals
+
+<wabbits> what's up?
+<jim> I got an analog headset with stereo headphones and mic... the 3.5mm plug has 4 or 5 conductors
+<wabbits> yes
+<wabbits> should be 4 left, right, mic, ground
+<jim> so... is there a way to find out which socket on the sound card (on mobo) accomodates that plug?
+<jim> yeah
+<wabbits> is it one plug or 2?
+<jim> 1
+<wabbits> you may be sol
+<jim> ok, I can get a splitter I guess
+<wabbits> yes
+<wabbits> google headset buddy
+<jim> would a look at the output of the alsa-info.sh script say one way or the other?
+<jim> ok
+<wabbits> no
+<wabbits> what card do you have and what are the jack colours on it?
+<jim> I'd have to look in the back of the machine to find that... it's in a position that's somewhat awkward for that
+<wabbits> this one https://www.headsetbuddy.com/3-5-phone-to-pc/
