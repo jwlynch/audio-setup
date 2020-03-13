@@ -252,3 +252,6 @@ membership in audio group is active
 <jim> thanks for your patience... if I'm running out of energy you might be running out at twice the rate
 <-- StarPulse has quit (Remote host closed the connection)
 <rgh> jim: I'm actually gonna sleep now ;-)
+
+use this to get the four tascam inputs: alsa_in -j tascam-inputs -d plughw:CARD=US4x4,DEV=0
+
