@@ -156,3 +156,99 @@ membership in audio group is active
 <wabbits> what card do you have and what are the jack colours on it?
 <jim> I'd have to look in the back of the machine to find that... it's in a position that's somewhat awkward for that
 <wabbits> this one https://www.headsetbuddy.com/3-5-phone-to-pc/
+
+(2020-01-11)
+
+<jim> oops there it is... in lsusb, Bus 002 Device 003: ID 0644:804e TEAC Corp.
+<jim> and now it shows up in interface of qjackctl setup
+<abbie> great!
+<milkii> on a somewhat related note, saw this the other week, interesting - https://github.com/onkelDead/tascam.lv2 - LV2 plugin to control Tascam US-16x08 interface via cutsom alsa driver.
+<jim> devices are hw:US4x4 and hw:US4x4,0
+<abbie> yup just the way its supposed
+<abbie> on of them is the one you want
+<jim> ook
+<abbie> i'd say the one with the 0 at the end
+<milkii> rgh: irc channel gone?
+<aloo_shu> ok, it shows now?
+<jim> yeah, had to power cycle the tascam
+<aloo_shu> for 5the notes: next step after lsusb would have been cat /proc/asound/cards, or other parts of /proc/asound
+<aloo_shu> *the
+<rgh> milkii: which channel?
+<milkii> ##clearlybroken (and #clearlybroken) are empty
+<rgh> Not even ChanServ?
+<holstein> i remember the day i gave my tascam interface to a friend fondly
+<rgh> Lemme check
+<rgh> On mobile now
+<jim> holstein, ummm... it didn't work for you?
+<holstein> works great!. great interface.. didnt work well with linux, at all..
+<rgh> milkii: oops
+<rgh> ##clearlybrokensoftware
+<jim> holstein, what did you do instead?
+<holstein> jim ?
+<holstein> i used the one that did work in linux..
+<jim> did you get a different interface?
+<holstein> sure..
+<jim> oh, which one is that?
+<-- wolftune has quit (Ping timeout: 268 seconds)
+<holstein> and, these days? 30 bucks, us, gets one a nice behringer interface, that works well in linux
+<milkii> rgh: noice, sorted, thanks
+<holstein> i have quite a few that work well in linux
+<jim> well let's see what happens here
+<holstein> these days? i pretty much either purchase something that says "linux is supported", or i try for a few minutes to see if its supported in linux, then i move on
+<jim> I think that did it! in claudia, I see two rectangles each having 4 ports
+<aloo_shu> I'm the proud owner of ##I-think-this-channel-name-is-seriously-too-long
+<jim> can qjackctl and jack2 control more than one sound card simultaneously/
+<jim> ?
+<holstein> the answer is almost always yes.. but you dont want to do that, likely
+<holstein> i think that'll cause more issues than it solves..
+<rgh> jim: you can use alsa_in and alsa_out to create audio ports for alsa devices
+<rgh> So start jackd on one card
+<rgh> Use alsa_in out to create ports for other cards
+--> stux (stux@cosmo.lunarshells.com) has joined #opensourcemusicians
+<rgh> The pro audio users say you should get a bigger mixer but I'm a lame noob with an USB mic
+<jimmm> I'm not sure I understand
+<aloo_shu> you can also do some asoundrc - fu to make a virtual compound device from your hw devices thru alsa, but I'd be hard pressed to even remember where I found the tutorial
+<holstein> you'll join all the devices you want, in alsa, and you'll control that with JACK
+<holstein> its not a good idea..
+<rgh> jimmm: https://jackaudio.org/faq/multiple_devices.html
+<jimmm> holstein, what's not good about it
+<jimmm> ?
+<aloo_shu> jack will always control just one device as its *backend*, but there are jack clients like alsa_in that allow connecting another card like you would connect an effect, for instance
+<aloo_shu> the problems are -resampling -clocks of 2 cards running out of sync, framedrop, glitch, maybe minimal, but not pro, although I've never tested what really happens, i.e. recording sines on 2 cards, then eyeing the waveform for glitches
+<jimmm> can I get the timing of the device jackd2 starts with, to control/be the time source for the other cards?
+<jimmm> holstein, now I see what you mean by "not a good idea"
+<aloo_shu> yes, just most cards ordinary mortals use, don't take external clock
+<rgh> jimmm: there will be some drift
+<rgh> I wouldn't sweat about it
+<jimmm> I'll try to figure this out, it should be not too bad
+<rgh> Glad the card works
+<rgh> jimmm: I've heard that zita-ajbridge does a better job than alsa_in/out
+<rgh> But the faq pages don't mention that because alsa_in/out comes with jack
+<rgh> Zita is another package that might not be available in every linux distro
+<jim> zita would have a kernel module/
+<jim> ?
+<rgh> No just an app with better dsp
+<-- trebmuh has quit (Remote host closed the connection)
+<rgh> Works the same as alsa_in
+<rgh> Ubuntu Studio Controls is the only app that I know of that has all settings / bridges etc in one
+<aloo_shu> debian buster you said?
+<aloo_shu> https://packages.debian.org/buster/zita-ajbridge
+<aloo_shu> get it through apt, though
+<jim> of course :)
+--> wolftune (~aaron@71-36-114-130.ptld.qwest.net) has joined #opensourcemusicians
+<aloo_shu> apt-cache search zita , they got more good stuff
+<jim> I might try to find a different approach,,, combining cards is problematic... maybe I just shouldn't try to go there
+<rgh> What is it what you want to achieve actually?
+<jim> the original thing, I noticed the 4 port rectangles for input and output in claudia, but two port when the laptop's sound was active in jack... the laptop has the headset jack so I can plug in headphones and the mic on it at the same time
+<jim> but when I saw the 4-port things -instead- of the 2-port, I knew that getting them to work together might be a problem... I wanted to use the headphones, the mic (on the laptop sound card) and the internal sound card at the same time, so I could do lmms'
+--> Ricardus (~rich@cpe-69-201-66-225.twcny.res.rr.com) has joined #opensourcemusicians
+<rgh> Start jack with the onboard card and use zita for the tascam seems a logical way to do it
+<-- Branes (~Branes@unaffiliated/branes) has left #opensourcemusicians ("Excuse me, my ports need a nap ...")
+<jim> rgh, ok, I'm trying to make that happen now
+<-- jim has quit (Remote host closed the connection)
+--- You are now known as jim
+<jim> I kinda ran out of energy doing that
+<jim> might any of you be available later?
+<jim> thanks for your patience... if I'm running out of energy you might be running out at twice the rate
+<-- StarPulse has quit (Remote host closed the connection)
+<rgh> jim: I'm actually gonna sleep now ;-)

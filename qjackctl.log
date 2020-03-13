@@ -1,0 +1,235 @@
+03:07:47.215 Logging started --- Sun Nov 3 03:07:47 2019 ---
+03:07:47.272 Statistics reset.
+03:07:47.335 ALSA connection change.
+03:07:47.436 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+03:07:47.557 ALSA connection graph change.
+03:07:57.688 Startup script...
+03:07:57.689 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+03:07:58.090 Startup script terminated with exit status=32512.
+03:07:58.159 D-BUS: JACK server is starting...
+03:07:58.160 D-BUS: JACK server was started (org.jackaudio.service aka jackdbus).
+Sun Nov  3 03:07:58 2019: Starting jack server...
+Sun Nov  3 03:07:58 2019: JACK server starting in non-realtime mode
+Sun Nov  3 03:07:58 2019: self-connect-mode is "Don't restrict self connect requests"
+Sun Nov  3 03:07:58 2019: Acquired audio card Audio0
+Sun Nov  3 03:07:58 2019: creating alsa driver ... hw:CARD=HDMI,DEV=3|-|256|2|48000|0|2|nomon|swmeter|-|32bit
+Sun Nov  3 03:07:58 2019: configuring for 48000Hz, period = 256 frames (5.3 ms), buffer = 2 periods
+Sun Nov  3 03:07:58 2019: ALSA: final selected sample format for playback: 32bit integer little-endian
+Sun Nov  3 03:07:58 2019: ALSA: use 2 periods for playback
+Sun Nov  3 03:07:58 2019: graph reorder: new port 'system:playback_1'
+Sun Nov  3 03:07:58 2019: New client 'system' with PID 0
+Sun Nov  3 03:07:58 2019: graph reorder: new port 'system:playback_2'
+Sun Nov  3 03:07:59 2019: Saving settings to "/home/jim/.config/jack/conf.xml" ...
+03:08:00.295 JACK connection change.
+03:08:00.295 Server configuration saved to "/home/jim/.jackdrc".
+03:08:00.296 Statistics reset.
+03:08:00.298 Client activated.
+03:08:00.298 Patchbay deactivated.
+03:08:00.388 JACK connection graph change.
+Sun Nov  3 03:08:00 2019: New client 'qjackctl' with PID 12542
+03:08:08.441 Logging stopped --- Sun Nov 3 03:08:08 2019 ---
+10:24:17.322 Logging started --- Mon Dec 16 10:24:17 2019 ---
+10:24:17.393 Statistics reset.
+10:24:17.396 ALSA connection change.
+10:24:17.399 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+10:24:17.553 ALSA connection graph change.
+10:24:19.724 Startup script...
+10:24:19.724 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+10:24:20.127 Startup script terminated with exit status=32512.
+10:24:20.601 D-BUS: JACK server is starting...
+Mon Dec 16 10:24:20 2019: Starting jack server...
+Mon Dec 16 10:24:20 2019: JACK server starting in non-realtime mode
+Mon Dec 16 10:24:20 2019: self-connect-mode is "Don't restrict self connect requests"
+Mon Dec 16 10:24:20 2019: Acquired audio card Audio0
+Mon Dec 16 10:24:20 2019: creating alsa driver ... hw:CARD=HDMI,DEV=3|-|256|2|48000|0|2|nomon|swmeter|-|32bit
+10:24:20.602 D-BUS: JACK server was started (org.jackaudio.service aka jackdbus).
+Mon Dec 16 10:24:20 2019: configuring for 48000Hz, period = 256 frames (5.3 ms), buffer = 2 periods
+Mon Dec 16 10:24:20 2019: ALSA: final selected sample format for playback: 32bit integer little-endian
+Mon Dec 16 10:24:20 2019: ALSA: use 2 periods for playback
+Mon Dec 16 10:24:20 2019: graph reorder: new port 'system:playback_1'
+Mon Dec 16 10:24:20 2019: New client 'system' with PID 0
+Mon Dec 16 10:24:20 2019: graph reorder: new port 'system:playback_2'
+Mon Dec 16 10:24:21 2019: Saving settings to "/home/jim/.config/jack/conf.xml" ...
+10:24:22.624 JACK connection change.
+10:24:22.624 Server configuration saved to "/home/jim/.jackdrc".
+10:24:22.625 Statistics reset.
+10:24:22.627 Client activated.
+10:24:22.627 Patchbay deactivated.
+10:24:22.743 JACK connection graph change.
+Mon Dec 16 10:24:22 2019: New client 'qjackctl' with PID 4049
+10:24:26.401 Logging stopped --- Mon Dec 16 10:24:26 2019 ---
+12:21:54.713 Logging started --- Mon Dec 16 12:21:54 2019 ---
+12:21:54.792 Statistics reset.
+12:21:54.852 ALSA connection change.
+12:21:54.986 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+12:21:55.005 JACK connection change.
+12:21:55.009 Client activated.
+12:21:55.010 Patchbay deactivated.
+12:21:59.697 Client deactivated.
+12:21:59.697 Post-shutdown script...
+12:21:59.697 killall jackd
+12:22:00.113 Post-shutdown script terminated successfully.
+12:29:26.996 Startup script...
+12:29:26.996 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+12:29:27.398 Startup script terminated with exit status=32512.
+12:29:27.480 D-BUS: JACK server is starting...
+12:29:27.481 D-BUS: JACK server was started (org.jackaudio.service aka jackdbus).
+Mon Dec 16 12:29:27 2019: Starting jack server...
+Mon Dec 16 12:29:27 2019: JACK server starting in non-realtime mode
+Mon Dec 16 12:29:27 2019: self-connect-mode is "Don't restrict self connect requests"
+Mon Dec 16 12:29:27 2019: Acquired audio card Audio0
+Mon Dec 16 12:29:27 2019: creating alsa driver ... hw:CARD=HDMI,DEV=3|-|256|2|48000|0|2|nomon|swmeter|-|32bit
+Mon Dec 16 12:29:27 2019: configuring for 48000Hz, period = 256 frames (5.3 ms), buffer = 2 periods
+Mon Dec 16 12:29:27 2019: ALSA: final selected sample format for playback: 32bit integer little-endian
+Mon Dec 16 12:29:27 2019: ALSA: use 2 periods for playback
+Mon Dec 16 12:29:27 2019: graph reorder: new port 'system:playback_1'
+Mon Dec 16 12:29:27 2019: New client 'system' with PID 0
+Mon Dec 16 12:29:27 2019: graph reorder: new port 'system:playback_2'
+Mon Dec 16 12:29:29 2019: Saving settings to "/home/jim/.config/jack/conf.xml" ...
+12:29:29.519 JACK connection change.
+12:29:29.519 Server configuration saved to "/home/jim/.jackdrc".
+12:29:29.519 Statistics reset.
+12:29:29.522 Client activated.
+12:29:29.522 Patchbay deactivated.
+12:29:29.614 JACK connection graph change.
+Mon Dec 16 12:29:29 2019: New client 'qjackctl' with PID 3131
+12:29:34.376 Logging stopped --- Mon Dec 16 12:29:34 2019 ---
+12:30:37.199 Logging started --- Mon Dec 16 12:30:37 2019 ---
+12:30:37.258 Statistics reset.
+12:30:37.260 ALSA connection change.
+12:30:37.263 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+12:30:37.276 JACK connection change.
+12:30:37.281 Client activated.
+12:30:37.282 Patchbay deactivated.
+Mon Dec 16 12:30:37 2019: New client 'qjackctl' with PID 3682
+12:30:42.535 Client deactivated.
+12:30:42.565 D-BUS: JACK server is stopping...
+12:30:42.565 D-BUS: JACK server was stopped (org.jackaudio.service aka jackdbus).
+12:30:42.565 Post-shutdown script...
+12:30:42.565 killall jackd
+jackd: no process found
+12:30:42.970 Post-shutdown script terminated with exit status=256.
+Mon Dec 16 12:30:42 2019: Client 'qjackctl' with PID 3682 is out
+Mon Dec 16 12:30:42 2019: Stopping jack server...
+Mon Dec 16 12:30:42 2019: Client 'system' with PID 0 is out
+Mon Dec 16 12:30:42 2019: Released audio card Audio0
+12:31:00.436 Startup script...
+12:31:00.437 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+12:31:00.838 Startup script terminated with exit status=32512.
+12:31:00.908 D-BUS: JACK server is starting...
+12:31:00.908 D-BUS: JACK server was started (org.jackaudio.service aka jackdbus).
+Mon Dec 16 12:31:00 2019: Starting jack server...
+Mon Dec 16 12:31:00 2019: JACK server starting in non-realtime mode
+Mon Dec 16 12:31:00 2019: self-connect-mode is "Don't restrict self connect requests"
+Mon Dec 16 12:31:00 2019: Acquired audio card Audio0
+Mon Dec 16 12:31:00 2019: creating alsa driver ... hw:CARD=HDMI,DEV=3|-|256|2|44100|0|2|nomon|swmeter|-|32bit
+Mon Dec 16 12:31:00 2019: configuring for 44100Hz, period = 256 frames (5.8 ms), buffer = 2 periods
+Mon Dec 16 12:31:00 2019: ALSA: final selected sample format for playback: 32bit integer little-endian
+Mon Dec 16 12:31:00 2019: ALSA: use 2 periods for playback
+Mon Dec 16 12:31:00 2019: graph reorder: new port 'system:playback_1'
+Mon Dec 16 12:31:00 2019: New client 'system' with PID 0
+Mon Dec 16 12:31:00 2019: graph reorder: new port 'system:playback_2'
+12:31:03.056 JACK connection change.
+12:31:03.057 Server configuration saved to "/home/jim/.jackdrc".
+12:31:03.058 Statistics reset.
+12:31:03.061 Client activated.
+12:31:03.061 Patchbay deactivated.
+12:31:03.152 JACK connection graph change.
+Mon Dec 16 12:31:02 2019: Saving settings to "/home/jim/.config/jack/conf.xml" ...
+Mon Dec 16 12:31:03 2019: New client 'qjackctl' with PID 3682
+12:31:09.268 Logging stopped --- Mon Dec 16 12:31:09 2019 ---
+12:32:10.986 Logging started --- Mon Dec 16 12:32:10 2019 ---
+12:32:11.046 Statistics reset.
+12:32:11.048 ALSA connection change.
+12:32:11.051 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+12:32:11.066 JACK connection change.
+12:32:11.073 Client activated.
+12:32:11.074 Patchbay deactivated.
+Mon Dec 16 12:32:11 2019: New client 'qjackctl' with PID 3709
+12:32:15.750 Client deactivated.
+12:32:15.786 D-BUS: JACK server is stopping...
+12:32:15.787 D-BUS: JACK server was stopped (org.jackaudio.service aka jackdbus).
+12:32:15.787 Post-shutdown script...
+12:32:15.787 killall jackd
+jackd: no process found
+Mon Dec 16 12:32:15 2019: Client 'qjackctl' with PID 3709 is out
+Mon Dec 16 12:32:15 2019: Stopping jack server...
+Mon Dec 16 12:32:15 2019: Client 'system' with PID 0 is out
+Mon Dec 16 12:32:15 2019: Released audio card Audio0
+12:32:16.191 Post-shutdown script terminated with exit status=256.
+12:32:23.054 Logging stopped --- Mon Dec 16 12:32:23 2019 ---
+12:33:01.148 Logging started --- Mon Dec 16 12:33:01 2019 ---
+12:33:01.208 Statistics reset.
+12:33:01.209 ALSA connection change.
+12:33:01.212 D-BUS: Service is available (org.jackaudio.service aka jackdbus).
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+12:33:01.318 ALSA connection graph change.
+12:33:26.667 Startup script...
+12:33:26.668 artsshell -q terminate
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+sh: 1: artsshell: not found
+12:33:27.070 Startup script terminated with exit status=32512.
+12:33:27.139 D-BUS: JACK server is starting...
+12:33:27.139 D-BUS: JACK server was started (org.jackaudio.service aka jackdbus).
+Mon Dec 16 12:33:27 2019: Starting jack server...
+Mon Dec 16 12:33:27 2019: JACK server starting in non-realtime mode
+Mon Dec 16 12:33:27 2019: self-connect-mode is "Don't restrict self connect requests"
+Mon Dec 16 12:33:27 2019: Acquired audio card Audio0
+Mon Dec 16 12:33:27 2019: creating alsa driver ... hw:CARD=HDMI,DEV=3|-|256|2|48000|0|2|nomon|swmeter|-|32bit
+Mon Dec 16 12:33:27 2019: configuring for 48000Hz, period = 256 frames (5.3 ms), buffer = 2 periods
+Mon Dec 16 12:33:27 2019: ALSA: final selected sample format for playback: 32bit integer little-endian
+Mon Dec 16 12:33:27 2019: ALSA: use 2 periods for playback
+Mon Dec 16 12:33:27 2019: graph reorder: new port 'system:playback_1'
+Mon Dec 16 12:33:27 2019: New client 'system' with PID 0
+Mon Dec 16 12:33:27 2019: graph reorder: new port 'system:playback_2'
+12:33:29.220 JACK connection change.
+12:33:29.221 Server configuration saved to "/home/jim/.jackdrc".
+12:33:29.221 Statistics reset.
+12:33:29.224 Client activated.
+12:33:29.224 Patchbay deactivated.
+Mon Dec 16 12:33:28 2019: Saving settings to "/home/jim/.config/jack/conf.xml" ...
+Mon Dec 16 12:33:29 2019: New client 'qjackctl' with PID 3721
+12:33:29.302 JACK connection graph change.
+12:33:32.217 Logging stopped --- Mon Dec 16 12:33:32 2019 ---
