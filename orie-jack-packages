@@ -1,0 +1,9 @@
+jackd1						deinstall
+jackd2-firewire					install
+jackd2						install
+jackd						install
+libjack-jackd2-0:amd64				install
+libjack-jackd2-dev:amd64			install
+pulseaudio-module-jack				install
+python3-jack-client				install
+qjackctl					install
